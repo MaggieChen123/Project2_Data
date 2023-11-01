@@ -68,7 +68,8 @@ for (let i = 0; i < numRows; i++){
   let w = cal[i];
   let h = 200;
 
- 
+  let adjustedFat = parseFloat(fat[i]) + 60;
+  let adjustedSugar = parseFloat(sugar[i]) + 60;
 
   noStroke();
 
@@ -80,11 +81,11 @@ for (let i = 0; i < numRows; i++){
 
   strokeWeight(4);
   stroke(168, 12, 12)//fat
-  line(x,y+10,fat[i],y+10);
+  line(x,y+10,adjustedFat,y+10);
   //print(60+fat[0]);
 
   stroke(12, 163, 171)// sugar
-line(x,y+20,sugar[i],y + 20)
+line(x,y+20,adjustedSugar,y + 20)
   
 }
 
